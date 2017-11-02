@@ -42,7 +42,7 @@ COLLECTION_ID = discovery_constants['collection_id']['regular']
 if DESIRED_COLLECTION_NAME == TRAINED_COLLECTION_NAME:
     COLLECTION_ID = discovery_constants['collection_id']['trained']
 
-qopts = {'natural_language_query': QUESTION, 'count': MAX_DOCUMENTS}
+qopts = {'natural_language_query': QUESTION, 'count': MAX_DOCUMENTS, 'deduplicate': 'true'}
 
 # Invoke search using Discovery query API
 output = discovery.query(environment_id=discovery_constants['environment_id'],
